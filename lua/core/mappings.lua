@@ -8,7 +8,7 @@ M.general = {
     ["<C-b>"] = { "<ESC>^i", "Beginning of line" },
     ["<C-e>"] = { "<End>", "End of line" },
 
-    -- navigate within insert mode
+    -- navigate withinsertppode
     ["<C-h>"] = { "<Left>", "Move left" },
     ["<C-l>"] = { "<Right>", "Move right" },
     ["<C-j>"] = { "<Down>", "Move down" },
@@ -61,8 +61,8 @@ M.general = {
   v = {
     ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "Move up", opts = { expr = true } },
     ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
-    ["<"] = { "<gv", "Indent line" },
-    [">"] = { ">gv", "Indent line" },
+    ["<"] = { "<gv", " line" },
+    [">"] = { ">gv", " line" },
   },
 
   x = {
@@ -385,9 +385,9 @@ M.blankline = {
   n = {
     ["<leader>cc"] = {
       function()
-        local ok, start = require("indent_blankline.utils").get_current_context(
-          vim.g.indent_blankline_context_patterns,
-          vim.g.indent_blankline_use_treesitter_scope
+        local ok, start = require("_blankline.utils").get_current_context(
+          vim.g._blankline_context_patterns,
+          vim.g._blankline_use_treesitter_scope
         )
 
         if ok then
