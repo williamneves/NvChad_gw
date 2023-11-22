@@ -60,7 +60,6 @@ M.treesitter = {
     "markdown",
     "markdown_inline",
     "prisma",
-    "prismals",
   },
   highlight = {
     enable = true,
@@ -68,6 +67,9 @@ M.treesitter = {
   },
   autotag = {
     enable = true,
+  },
+  extension = {
+    astro = "astro",
   },
   indent = {
     enable = true,
@@ -99,6 +101,7 @@ M.mason = {
     "deno",
     "prettier",
     "prismals",
+    "astro",
 
     -- c/cpp stuff
     "clangd",
@@ -128,7 +131,16 @@ M.nvimtree = {
 
 M.telescope = {
   defaults = {
-    file_ignore_patterns = { "node_modules", ".git", ".next" },
+    file_ignore_patterns = {
+      "node_modules",
+      ".git",
+      ".next",
+      ".yarn",
+      ".cache",
+      ".pnpm",
+      ".DS_Store",
+      ".astro/",
+    },
   },
   pickers = {
     find_files = {

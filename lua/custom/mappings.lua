@@ -20,7 +20,8 @@ M.general = {
   i = {
     ["<M-j>"] = { "<ESC>:m .+1<CR>==", "Move line down" },
     ["<M-k>"] = { "<ESC>:m .-2<CR>==", "Move line up" },
-  },
+    ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
+ },
 }
 
 -- more keybinds!

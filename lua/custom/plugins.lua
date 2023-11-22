@@ -3,8 +3,10 @@ local overrides = require "custom.configs.overrides"
 ---@type NvPluginSpec[]
 local plugins = {
 
-  -- Override plugin definition options
+  -- ASTRO plugin
+  --
 
+  -- Override plugin definition options
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -67,15 +69,15 @@ local plugins = {
     opts = overrides.mason,
   },
 
-  -- {
-  --   "nvim-treesitter/nvim-treesitter",
-  --   build = ":TSUpdate",
-  --   dependencies = {
-  --     "windwp/nvim-ts-autotag",
-  --     "nvim-treesitter/nvim-treesitter-textobjects",
-  --   },
-  --   opts = overrides.treesitter,
-  -- },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    dependencies = {
+      "windwp/nvim-ts-autotag",
+      "nvim-treesitter/nvim-treesitter-textobjects",
+    },
+    opts = overrides.treesitter,
+  },
   --
   -- Text objects
   -- {
